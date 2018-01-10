@@ -1,1 +1,1 @@
-# 注解自动装配Bean
+# 使用JavaConfig配置Bean
