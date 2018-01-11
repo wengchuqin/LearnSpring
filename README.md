@@ -1,1 +1,1 @@
-# 使用JavaConfig配置Bean
+# 使用environment配置属性
