@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisShardInfo;
 
 /**
@@ -22,6 +23,7 @@ public class RedisConfig {
     public RedisTemplate<String, Product> redisTemplate(RedisConnectionFactory cf) {
         RedisTemplate<String, Product> redis = new RedisTemplate<String, Product>();
         redis.setConnectionFactory(cf);
+        redis.setKeySerializer(new StringRedisSerializer());
         return redis;
     }
 }

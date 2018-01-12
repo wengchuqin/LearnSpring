@@ -32,7 +32,7 @@ public class RedisConfigTest {
         Product product = new Product();
         product.setName("ss");
         product.setPrice(222);
-        product.setSku("sku" + Instant.now().getEpochSecond());
+        product.setSku("sku11112222");
         redis.opsForValue().set(product.getSku(), product);
     }
 
